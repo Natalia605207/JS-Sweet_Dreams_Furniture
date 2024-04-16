@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>🛋️SWEET DREAMS</title>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Work+Sans&display=swap" rel="stylesheet">
+   </head>
+   <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+      <header>
+         <div class="members">
+            <p class="save">Members save up to 30%</p>
+         </div>
+      </header>
+      <main>
+         <section class="container-top column">
+            <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">SWEET DREAMS</h1>
+            <p class="motto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">Furniture that makes you happy</p>
+            <img class="bottom-icon" src="assets/down-arrow.png" alt="arrow-down">
+         </section>
+         <section class="arrivals column"  data-aos="fade-up-right" data-aos-duration="1500">
+            <img class="sofa" src="assets/sofa.png" alt="sofa">
+            <h3>New Arrivals</h3>
+            <p class="subheading">Created with care and love by our designers
+            </h3>
+            <div class="row">
+               <div class="item one selected">
+                  <h4>Woody</h4>
+                  <p class="description">high metal chair with wooden back</p>
+                  <p class="price">$400.00</p>
+               </div>
+               <div class="item two">
+                  <h4>Brittal</h4>
+                  <p class="description">extremely comfortable and soft</p>
+                  <p class="price">$520.00</p>
+               </div>
+               <div class="item three">
+                  <h4>Boongy</h4>
+                  <p class="description">modern and laconic design</p>
+                  <p class="price">$360.00</p>
+               </div>
+               <div class="item four">
+                  <h4>Plush</h4>
+                  <p class="description">stylish and simple</p>
+                  <p class="price">$330.00</p>
+               </div>
+               <div class="item five">
+                  <h4>Dazzy</h4>
+                  <p class="description">soft and good-looking</p>
+                  <p class="price">$260.00</p>
+               </div>
+               <div class="item six">
+                  <h4>Friendy</h4>
+                  <p class="description">elegant and comfortable</p>
+                  <p class="price">$610.00</p>
+               </div>
+            </div>
+         </section>
+         <section class="showroom column" data-aos="fade-up-right" data-aos-duration="1500">
+            <img class="sofa" src="assets/sofa.png" alt="sofa">
+            <h3>Visit our showroom</h3>
+            <p class="subheading">Choose the best furniture for your home</p>
+            <img id="furniture" src="assets/one.jpg" alt="furniture">
+            <div class="buttons center">
+               <img src="assets/back_arrow.png" alt="back-arrow" id="back">
+               <img src="assets/next_arrow.png" alt="next-arrow" id="next">
+            </div>
+         </section>
+         <section class="feedback column" data-aos="fade-up" data-aos-duration="1500">
+            <img class="sofa" src="assets/sofa.png" alt="sofa">
+            <h3>We are Always Ready to Answer Your Questions!</h3>
+            <form
+               action="https://formspree.io/f/mqkogjjz"
+               method="POST"
+               >
+               <input type="hidden" name="_language" value="en" />
+               <div class="input-container">
+                  <input type="text" class="input-field" name="fname" placeholder="Enter your name" required="">
+                  <label for="fname" class="input-label">Enter name</label>
+                  <span class="input-highlight"></span>
+               </div>
+               <div class="input-container">
+                  <input type="email" class="input-field" name="email" placeholder="Enter your email" required="">
+                  <label for="email" class="input-label">Enter email</label>
+                  <span class="input-highlight"></span>
+               </div>
+               <div class="input-container">
+                  <textarea class="input-field" name="message" placeholder="Type your message" required=""></textarea>
+                  <label for="message" class="input-label">Type your message</label>
+                  <span class="input-highlight"></span>
+               </div>
+               <br>
+               <div class="center">
+                  <button class="btn" type="submit">Send</button>
+               </div>
+            </form>
+            <div class="center">
+               <img class="sofa-photo" src="assets/sofa-photo.jpg" alt="sofa" data-aos="zoom-in" data-aos-duration="1200">
+            </div>
+         </section>
+         <section class="sale">
+            <div class="center">
+               <p class="announcement">Flash sale starts in</p>
+               <p class="hours"></p>
+               <span>:</span>
+               <p class="minutes"></p>
+               <span>:</span>
+               <p class="seconds"></p>
+            </div>
+         </section>
+      </main>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="index.js"></script>
+      <script>AOS.init();</script>
+   </body>
+</html>

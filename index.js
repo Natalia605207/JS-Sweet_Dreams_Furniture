@@ -34,7 +34,7 @@ back.addEventListener('click', () => {
 })
 
 function salesCountdown() {
-    const salesDate = new Date ("May 26, 2024 00:00");
+    const salesDate = new Date ("December 26, 2024 00:00");
     const now = new Date();
     const diff = salesDate - now;
 

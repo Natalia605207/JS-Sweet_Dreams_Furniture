@@ -10,9 +10,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Work+Sans&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/81ed789937.js" crossorigin="anonymous"></script>
    </head>
    <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
-      <header>
+      <header id="discount" class="discount visible">
          <div class="members">
             <p class="save">Members save up to 30%</p>
          </div>
@@ -21,13 +22,12 @@
          <section class="container-top column">
             <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">SWEET DREAMS</h1>
             <p class="motto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">Furniture that makes you happy</p>
-            <img class="bottom-icon" src="assets/down-arrow.png" alt="arrow-down">
+            <a class="center" href="#newItems"><img class="bottom-icon" src="assets/down-arrow.png" alt="arrow-down"></a>
          </section>
-         <section class="arrivals column"  data-aos="fade-up-right" data-aos-duration="1500">
+         <section class="arrivals column" id="newItems" data-aos="fade-up-right" data-aos-duration="1500">
             <img class="sofa" src="assets/sofa.png" alt="sofa">
             <h3>New Arrivals</h3>
-            <p class="subheading">Created with care and love by our designers
-            </h3>
+            <p class="subheading">Created with care and love by our designers</p>
             <div class="row">
                <div class="item one selected">
                   <h4>Woody</h4>
@@ -61,7 +61,7 @@
                </div>
             </div>
          </section>
-         <section class="showroom column" data-aos="fade-up-right" data-aos-duration="1500">
+         <section class="showroom column" data-aos="fade-up-right" data-aos-duration="1500" id="showroom">
             <img class="sofa" src="assets/sofa.png" alt="sofa">
             <h3>Visit our showroom</h3>
             <p class="subheading">Choose the best furniture for your home</p>
@@ -71,7 +71,7 @@
                <img src="assets/next_arrow.png" alt="next-arrow" id="next">
             </div>
          </section>
-         <section class="feedback column" data-aos="fade-up" data-aos-duration="1500">
+         <section class="feedback column" data-aos="fade-up" data-aos-duration="1500" id="feedback">
             <img class="sofa" src="assets/sofa.png" alt="sofa">
             <h3>We are Always Ready to Answer Your Questions!</h3>
             <form
@@ -103,7 +103,25 @@
                <img class="sofa-photo" src="assets/sofa-photo.jpg" alt="sofa" data-aos="zoom-in" data-aos-duration="1200">
             </div>
          </section>
-         <section class="sale">
+         <section class="contacts">
+            <div class="column">
+               <div class="center">
+                  <a href="https://facebook.com" target="_blank" class="socials"><i class="fa-brands fa-facebook" id="social-icon"></i></a>
+                  <a href="https://linkedin.com" target="_blank" class="socials"><i class="fa-brands fa-linkedin-in" id="social-icon"></i></i></a>
+                  <a href="https://instagram.com" target="_blank" class="socials"><i class="fa-brands fa-instagram" id="social-icon"></i></a>
+               </div>
+               <p><a class="phone" href="tel:+79168391700"><i class="fa-solid fa-phone"></i> +1 (437) 888-5532</a></p>
+               <ul class="center links-container">
+                  <li><a href="#newItems" class="links">Arrivals</a></li>
+                  <li><a href="#showroom" class="links">Showroom</a></li>
+                  <li><a href="#feedback" class="links">Contacts</a></li>
+               </ul>
+               <p class="rights">@2023 Sweet Dreams Furniture. All rights reserved</p>
+               <p class="rights">Designed and developed by <a href="https://natalia-webdev.com/" target="_blank" class="portfolio-link">Natalia Musikhina</a></p>
+            </div>
+         </section>
+         </main>
+         <footer class="sale">
             <div class="center">
                <p class="announcement">Flash sale starts in</p>
                <p class="hours"></p>
@@ -112,8 +130,7 @@
                <span>:</span>
                <p class="seconds"></p>
             </div>
-         </section>
-      </main>
+         </footer>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="index.js"></script>
       <script>AOS.init();</script>

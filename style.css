@@ -34,9 +34,29 @@ main {
 }
 
 .members {
-    background-color: #333333;
     padding: 10px;
+    width: 100%;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    translate: 0 -72px;
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    transition: 0.3s;
+}
+
+header.visible {
+    top: 0;
+    translate: 0;
+  }
 
 .save {
     color: #ffffff;
@@ -384,6 +404,39 @@ span {
     width: 100%;
 }
 
+.contacts {
+    background-color: #efeeea;
+    padding: 50px 10px;
+    text-align: center;
+}
+
+.socials {
+    color:#333333;
+    margin: 20px;
+    font-size: 27px;
+}
+
+.phone {
+    color:#2c241d;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.links-container {
+    list-style-type: none;
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+.links, .portfolio-link {
+    text-decoration: none;
+    color:#333333;
+    font-weight: bold;
+}
+
+.links:hover, .portfolio-link:hover {
+    text-decoration: underline;
+}
 
 @media all and (max-width: 820px) {
     h1 {
@@ -467,11 +520,28 @@ span {
         padding: 10px 0px;
     }    
 
-    .announcement {
+    .announcement, .phone {
         font-size: 16px;
     }
     
     .hours, .minutes, .seconds {
         font-size: 20px;
+    }
+
+    .contacts {
+        padding: 15px 10px 30px;
+    }
+
+    .socials {
+        font-size: 25px;
+    }
+
+    .links-container {
+        padding: 30px 0px;
+        gap: 15px;
+    }
+
+    .rights {
+        font-size: 14px;
     }
 }

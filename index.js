@@ -1,3 +1,21 @@
+const discount = document.querySelector('#discount');
+
+let lastScrollTop = 0;
+
+window.addEventListener(
+  "scroll",
+  () => {
+    let { pageYOffset } = window;
+    if (pageYOffset > lastScrollTop) {
+      discount.classList.remove("visible");
+    } else if (pageYOffset < lastScrollTop) {
+      discount.classList.add("visible");
+    } 
+    lastScrollTop = pageYOffset <= 0 ? 0 : pageYOffset;
+  },
+  { passive: true }
+);
+
 const items = document.querySelectorAll('.item');
 
 items.forEach(item => {
@@ -34,7 +52,7 @@ back.addEventListener('click', () => {
 })
 
 function salesCountdown() {
-    const salesDate = new Date ("May 26, 2024 00:00");
+    const salesDate = new Date ("September 16, 2024 00:00");
     const now = new Date();
     const diff = salesDate - now;
 
@@ -42,13 +60,24 @@ function salesCountdown() {
     const msInMinute = 60 * 1000;
     const msInHour = 60 * 60 * 1000;
 
-    const displayHour = Math.floor(diff/msInHour);
+    let displayHour = Math.floor(diff/msInHour);
+    let displayMinute = Math.floor((diff%msInHour) / msInMinute);
+    let displaySecond = Math.floor((diff%msInMinute) / msInSecond);
+
+    if (displayHour < 10) {
+        displayHour = "0" + displayHour;
+    }
+
+    if (displayMinute < 10) {
+        displayMinute = "0" + displayMinute;
+    }
+
+    if (displaySecond < 10) {
+        displaySecond = "0" + displaySecond;
+    }
+
     document.querySelector('.hours').textContent = displayHour;
-
-    const displayMinute = Math.floor((diff%msInHour) / msInMinute);
     document.querySelector('.minutes').textContent = displayMinute;
-
-    const displaySecond = Math.floor((diff%msInMinute) / msInSecond);
     document.querySelector('.seconds').textContent = displaySecond;
 
     if(diff <= 0) {

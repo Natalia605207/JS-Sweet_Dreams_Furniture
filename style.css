@@ -6,11 +6,15 @@
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ffffff;
     color: #2c241d;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -44,7 +48,7 @@ header {
     left: 0;
     translate: 0 -72px;
     width: 100%;
-    height: 40px;
+    height: 60px;
     background-color: #333333;
     display: flex;
     align-items: center;
@@ -56,6 +60,103 @@ header {
 header.visible {
     top: 0;
     translate: 0;
+  }
+
+  .menu ul .menu-link a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 25px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 30px;
+  }
+  
+  ul .menu-link {
+    text-align: center;
+  }
+
+  
+  body.open .burger {
+    background-image: url("assets/close.svg");
+  }
+  
+  .burger {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 90;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    background: #2c241d;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url("assets/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    cursor: pointer;
+    transition: 0.175s;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    display: grid;
+    transition: 0.3s;
+    z-index: -5;
+  }
+  
+  .menu > div {
+    background: #e4e2dc;
+    translate: -100% 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  body.open .menu {
+    z-index: 80;
+  }
+  
+  body.open .menu > div {
+    translate: 0;
+    transition: 0.2s ease-in-out;
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      translate: 0 20px;
+    }
+    100% {
+      opacity: 1;
+      translate: 0;
+    }
+  }
+  
+  .menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  body.open .menu ul {
+    opacity: 1;
+  }
+  
+  body.open .menu ul .menu-link {
+    animation: appear 0.4s both;
   }
 
 .save {
@@ -408,18 +509,21 @@ span {
     background-color: #efeeea;
     padding: 50px 10px;
     text-align: center;
+    z-index: 5;
 }
 
 .socials {
     color:#333333;
     margin: 20px;
     font-size: 27px;
+    cursor: pointer;
 }
 
 .phone {
     color:#2c241d;
     text-decoration: none;
     font-size: 17px;
+    cursor: pointer;
 }
 
 .links-container {
@@ -432,6 +536,7 @@ span {
     text-decoration: none;
     color:#333333;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .links:hover, .portfolio-link:hover {
@@ -472,6 +577,10 @@ span {
     .bottom-icon {
         bottom: 150px;
         width: 45px;
+    }
+
+    .save {
+        font-size: 15px;
     }
 
     h3 {
@@ -542,6 +651,13 @@ span {
     }
 
     .rights {
+        font-size: 14px;
+    }
+}
+
+
+@media all and (max-width: 320px) {
+    .save {
         font-size: 14px;
     }
 }

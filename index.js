@@ -16,6 +16,18 @@ window.addEventListener(
   { passive: true }
 );
 
+const burger = document.querySelector('#burger-btn');
+const sections = document.querySelectorAll('.menu-link');
+
+const toggleMenu = () => {
+    document.body.classList.toggle("open")
+};
+
+burger.addEventListener("click", toggleMenu);
+sections.forEach(section => {
+    section.addEventListener("click", toggleMenu);
+});
+
 const items = document.querySelectorAll('.item');
 
 items.forEach(item => {
@@ -52,7 +64,7 @@ back.addEventListener('click', () => {
 })
 
 function salesCountdown() {
-    const salesDate = new Date ("September 16, 2024 00:00");
+    const salesDate = new Date ("September 30, 2024 00:00");
     const now = new Date();
     const diff = salesDate - now;
 

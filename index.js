@@ -2,9 +2,7 @@ const discount = document.querySelector('#discount');
 
 let lastScrollTop = 0;
 
-window.addEventListener(
-  "scroll",
-  () => {
+window.addEventListener("scroll", () => {
     let { pageYOffset } = window;
     if (pageYOffset > lastScrollTop) {
       discount.classList.remove("visible");
@@ -64,7 +62,7 @@ back.addEventListener('click', () => {
 })
 
 function salesCountdown() {
-    const salesDate = new Date ("September 30, 2024 00:00");
+    const salesDate = new Date ("October 10, 2024 00:00");
     const now = new Date();
     const diff = salesDate - now;
 

@@ -17,10 +17,6 @@ body {
     min-height: 100vh;
 }
 
-main {
-    scroll-behavior: smooth;
-}
-
 ::-webkit-scrollbar {
     width: 7px;
 }
